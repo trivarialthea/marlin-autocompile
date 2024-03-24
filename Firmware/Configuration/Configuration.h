@@ -37,7 +37,7 @@
  *
  * Advanced settings can be found in Configuration_adv.h
  */
-#define CONFIGURATION_H_VERSION 24032024
+#define CONFIGURATION_H_VERSION 02010202
 
 //===========================================================================
 //============================= Getting Started =============================
