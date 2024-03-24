@@ -12,7 +12,7 @@ jobs:
     name: Compile and Push Firmware
     runs-on: ubuntu-latest
     env:
-      BOARD: STM32F103RC_btt_512K
+      BOARD: LPC1768
 
     steps:
       - name: Check out repo
@@ -24,7 +24,7 @@ jobs:
             -u root:root \
             -e BOARD \
             -e UPDATE_FORCE=true \
-            -e USE_TAG=2.0.8.1 \
+            -e USE_TAG=2.1.2.2 \
             -v $(pwd)/Firmware/Builds:/home/platformio/build \
             -v $(pwd)/Firmware/Configuration:/home/platformio/CustomConfiguration \
             frealmyr/marlin-build:latest
