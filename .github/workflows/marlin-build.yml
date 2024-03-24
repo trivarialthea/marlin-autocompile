@@ -23,7 +23,6 @@ jobs:
           docker run \
             -u root:root \
             -e BOARD \
-            -e UPDATE_FORCE=true \
             -e USE_TAG=2.1.2.2 \
             -v $(pwd)/Firmware/Builds:/home/platformio/build \
             -v $(pwd)/Firmware/Configuration:/home/platformio/CustomConfiguration \
@@ -35,4 +34,4 @@ jobs:
           git config user.email github-actions@github.com
           git add .
           git commit -m "Compiled firmware"
-          git push
+          git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
